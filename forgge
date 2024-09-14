@@ -1,0 +1,30 @@
+<?php
+/**
+ * Forgge CLI shortcut.
+ *
+ * To get a full list of available commands run:
+ * php forgge list
+ *
+ * @link http://docs.forgge.com/#/starter/cli/overview
+ */
+
+if ( php_sapi_name() !== 'cli' ) {
+	exit;
+}
+
+$vendors = [
+	// $app/vendor
+	__DIR__ . DIRECTORY_SEPARATOR . 'vendor',
+
+	// $bedrock/vendor
+	dirname( dirname( dirname( dirname( __DIR__ ) ) ) ) . DIRECTORY_SEPARATOR . 'vendor',
+];
+
+foreach ( $vendors as $vendor ) {
+	$runner = implode( DIRECTORY_SEPARATOR, [$vendor, 'collaborar', 'forgge-cli', 'src', 'run.php'] );
+
+	if ( is_file( $runner ) ) {
+		require_once $runner;
+		break;
+	}
+}

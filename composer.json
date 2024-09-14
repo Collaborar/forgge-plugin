@@ -1,0 +1,66 @@
+{
+  "name": "collaborar/forgge-plugin",
+  "version": "0.17.1",
+  "description": "A modern WordPress starter plugin which uses the Forgge framework",
+  "type": "wordpress-plugin",
+  "keywords": ["wordpress", "plugin", "starter plugin", "forgge"],
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/Collaborar/forgge-plugin",
+  "authors": [
+    {
+      "name": "Collaborar team",
+      "email": "info@collaborar.com",
+      "homepage": "https://collaborar.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "composer/installers": "^1.4",
+    "collaborar/forgge": "@dev",
+    "collaborar/forgge-app-core": "@dev"
+  },
+  "require-dev": {
+    "filp/whoops": "~2.13.0",
+    "collaborar/forgge-cli": "@dev",
+    "symfony/debug": "~3.0",
+    "wp-coding-standards/wpcs": "^2.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyApp\\": "app/src/"
+    }
+  },
+  "scripts": {
+    "install-test-env": [
+      "forgge config:create"
+    ],
+    "install-dev-env": [
+      "@php forgge config:create",
+      "@php forgge install:dependencies",
+      "@php forgge assets:build"
+    ],
+    "post-create-project-cmd": "@install-dev-env"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../../libs/forgge"
+    },
+    {
+      "type": "path",
+      "url": "../../libs/forgge-app-core"
+    },
+    {
+      "type": "path",
+      "url": "../../libs/forgge-cli"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
