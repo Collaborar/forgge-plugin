@@ -4,6 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const pick = require('lodash/pick');
+const { hasArgInCLI } = require('@wordpress/scripts/utils');
 
 /**
  * User config cache.
@@ -62,7 +63,7 @@ module.exports.detectEnv = () => {
   const forggeEnv = process.env.FORGGE_ENV || '';
   const isCombined = !!process.env.FORGGE_COMBINED_BUILD;
   const isDevelopment = nodeEnv === 'development';
-  const isHot = forggeEnv === 'hot';
+  const isHot = hasArgInCLI('--hot');
   const isProduction = nodeEnv === 'production';
   const isDebug = forggeEnv === 'debug';
 

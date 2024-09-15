@@ -10,6 +10,7 @@ const chokidar = require('chokidar');
 class DevelopmentModePlugin {
   constructor({ hot = false }) {
     this.hot = hot;
+    this.file = ''
   }
 
   apply(compiler) {
@@ -21,9 +22,15 @@ class DevelopmentModePlugin {
           hot: this.hot,
         };
 
-        const filename = path.resolve(stats.compilation.outputOptions.path, 'development.json');
-        fs.writeFileSync(filename, JSON.stringify(development));
+        this.file = path.resolve(stats.compilation.outputOptions.path, 'development.json');
+        fs.writeFileSync(this.file, JSON.stringify(development));
       }
+    );
+
+    // Remove when process stops.
+    compiler.hooks.shutdown.tap(
+      'Forgge Development Mode Plugin',
+      () => fs.rmSync(this.file)
     );
 
     const views = [
