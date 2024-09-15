@@ -90,7 +90,8 @@ module.exports = {
           {
             loader: 'svg-sprite-loader',
             options: {
-              extract: false,
+              extract: env.isProduction,
+              spriteFileName: 'sprite.svg'
             },
           },
         ],
