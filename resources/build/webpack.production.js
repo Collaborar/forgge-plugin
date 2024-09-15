@@ -1,15 +1,8 @@
 /**
  * External dependencies.
  */
-// const url = require('whatwg-url');
-// const get = require('lodash/get');
 const { resolve } = require('path');
 const webpack = require('webpack');
-
-/**
- * Internal dependencies.
- */
-// const utils = require('./lib/utils');
 
 /** @type {webpack.Configuration} */
 module.exports = {
@@ -24,8 +17,4 @@ module.exports = {
     require.resolve('@wordpress/scripts/config/webpack.config'),
     resolve(__dirname, './webpack.base.js'),
   ],
-
-  // output: {
-  //   publicPath: env.isHot ? hotUrl : ''
-  // },
 };
