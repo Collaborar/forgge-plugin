@@ -14,6 +14,7 @@
     "lint-fix:scripts": "wp-scripts lint-js --fix",
     "lint-fix:styles": "wp-scripts lint-style --fix",
     "lint-fix:php": "composer lint-fix",
+    "wp-packages": "wp-scripts packages-update",
     "i18n": "composer i18n"
   },
   "dependencies": {},
