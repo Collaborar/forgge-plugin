@@ -22,12 +22,10 @@
   },
   "require-dev": {
     "roots/wordpress": "6.6.*",
-    "filp/whoops": "~2.13.0",
     "collaborar/forgge-cli": "dev-main",
-    "symfony/debug": "~3.0",
-    "wp-coding-standards/wpcs": "^2.0",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-    "wp-cli/i18n-command": "^2.6"
+    "wp-cli/i18n-command": "^2.6",
+    "wp-coding-standards/wpcs": "^3.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
   },
   "autoload": {
     "psr-4": {
