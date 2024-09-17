@@ -35,6 +35,10 @@
     }
   },
   "scripts": {
+    "lint": ["@cs"],
+    "lint-fix": ["@cs:fix"],
+    "cs": "phpcs --colors --standard=phpcs.xml ./",
+    "cs:fix": "phpcbf --colors --standard=phpcs.xml ./",
     "i18n:pot": "wp i18n make-pot . languages/my_app.pot --exclude=dist,test,node_modules,vendor --domain=my_app",
     "i18n:json": "wp i18n make-json languages",
     "i18n": [
