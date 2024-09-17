@@ -4,8 +4,6 @@
  * WARNING: Do not use \MyApp::route()->all() here, otherwise you will override
  * ALL web requests which you most likely do not want to.
  *
- * @link https://docs.forgge.com/#/framework/routing/methods
- *
  * @package MyApp
  */
 

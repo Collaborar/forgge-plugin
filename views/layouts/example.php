@@ -2,8 +2,6 @@
 /**
  * An example layout.
  *
- * @link https://docs.forgge.com/#/framework/views/layouts
- *
  * @package MyApp
  */
 
