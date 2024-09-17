@@ -5,7 +5,8 @@
   "scripts": {
     "start": "wp-scripts start --config resources/build/webpack.development.js",
     "hot": "wp-scripts start --hot --config resources/build/webpack.development.js",
-    "build": "wp-scripts build --config resources/build/webpack.development.js"
+    "build": "wp-scripts build --config resources/build/webpack.development.js",
+    "i18n": "composer i18n"
   },
   "dependencies": {},
   "devDependencies": {
