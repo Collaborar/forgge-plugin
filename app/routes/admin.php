@@ -4,8 +4,6 @@
  * WARNING: Do not use \MyApp::route()->all() here, otherwise you will override
  * ALL custom admin pages which you most likely do not want to do.
  *
- * @link https://docs.forgge.com/#/framework/routing/methods
- *
  * @package MyApp
  */
 

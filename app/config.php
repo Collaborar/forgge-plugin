@@ -2,8 +2,6 @@
 /**
  * Forgge configuration.
  *
- * @link https://docs.forgge.com/#/framework/configuration
- *
  * @package MyApp
  */
 

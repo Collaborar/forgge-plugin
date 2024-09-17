@@ -32,8 +32,6 @@ class ViewServiceProvider implements ServiceProviderInterface {
 	protected function registerGlobals() {
 		/**
 		 * Globals
-		 *
-		 * @link https://docs.forgge.com/#/framework/views/overview
 		 */
 		// phpcs:ignore
 		// \MyApp::views()->addGlobal( 'foo', 'bar' );
@@ -47,8 +45,6 @@ class ViewServiceProvider implements ServiceProviderInterface {
 	protected function registerComposers() {
 		/**
 		 * View composers
-		 *
-		 * @link https://docs.forgge.com/#/framework/views/view-composers
 		 */
 		// phpcs:ignore
 		// \MyApp::views()->addComposer( 'partials/foo', 'FooPartialViewComposer' );

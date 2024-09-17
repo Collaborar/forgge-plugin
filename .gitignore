@@ -1,7 +1,7 @@
 # Build files
 /dist/
 /resources/styles/frontend/_sprite.scss
-/resources/styles/*.config.scss
+/resources/styles/config.scss
 
 # Development files
 /config.json
@@ -22,6 +22,13 @@ yarn.lock
 # CLI tools
 drone.json
 
+# Linters cache
+.eslintcache
+.phpunitcache
+.phpcscache
+.psalm/cache
+.stylelintcache
+
 # Common
 .DS_Store
 .DS_Store?
@@ -31,3 +38,7 @@ drone.json
 ehthumbs.db
 Thumbs.db
 .idea
+
+# @todo remove it
+tmp
+composer.lock

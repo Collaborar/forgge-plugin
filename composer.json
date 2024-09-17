@@ -22,11 +22,10 @@
   },
   "require-dev": {
     "roots/wordpress": "6.6.*",
-    "filp/whoops": "~2.13.0",
     "collaborar/forgge-cli": "dev-main",
-    "symfony/debug": "~3.0",
-    "wp-coding-standards/wpcs": "^2.0",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0"
+    "wp-cli/i18n-command": "^2.6",
+    "wp-coding-standards/wpcs": "^3.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
   },
   "autoload": {
     "psr-4": {
@@ -34,6 +33,17 @@
     }
   },
   "scripts": {
+    "lint": ["@cs"],
+    "lint-fix": ["@cs:fix"],
+    "cs": "phpcs --colors --standard=phpcs.xml ./",
+    "cs:fix": "phpcbf --colors --standard=phpcs.xml ./",
+    "i18n:pot": "wp i18n make-pot . languages/my_app.pot --exclude=dist,test,node_modules,vendor --domain=my_app",
+    "i18n:json": "wp i18n make-json languages",
+    "i18n": [
+      "@i18n:pot",
+      "@i18n:json"
+    ],
+
     "install-test-env": [
       "forgge config:create"
     ],

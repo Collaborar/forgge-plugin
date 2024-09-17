@@ -131,14 +131,11 @@ module.exports = function (rawConfig) {
 
   if (typeof options.sassOutput !== 'undefined') {
     const sass = getSass(config);
+    const file = loaderUtils.interpolateName({
+      resourcePath: this.resourcePath
+    }, options.sassOutput, { content: sass });
 
-    this._module.reasons.forEach((reason) => {
-      const file = loaderUtils.interpolateName({
-        resourcePath: reason.module.context,
-      }, options.sassOutput, { content: sass });
-
-      fs.writeFileSync(path.resolve(this.context, file), sass);
-    });
+    fs.writeFileSync(path.resolve(this.context, file), sass);
   }
 
   // Make sure the JSON is inlined as an object instead of being parsed at runtime.

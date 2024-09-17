@@ -1,15 +1,12 @@
 {
-  "extends": "stylelint-config-recommended-scss",
-  "plugins": [
-    "stylelint-order",
-    "stylelint-scss"
-  ],
+  "extends": "@wordpress/stylelint-config/scss",
+  "plugins": [ "stylelint-order" ],
   "rules": {
-    "no-empty-source": null,
     "indentation": 2,
+    "order/properties-alphabetical-order": true,
     "order/order": [
-      "custom-properties",
       "dollar-variables",
+      "custom-properties",
       "declarations",
       "rules",
       "at-rules"

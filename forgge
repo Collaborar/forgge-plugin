@@ -4,8 +4,6 @@
  *
  * To get a full list of available commands run:
  * php forgge list
- *
- * @link http://docs.forgge.com/#/starter/cli/overview
  */
 
 if ( php_sapi_name() !== 'cli' ) {

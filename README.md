@@ -3,14 +3,9 @@ A modern WordPress starter plugin which uses the [Forgge](https://github.com/Col
 
 ## Summary
 
-- [Documentation](#documentation)
-- [Development Team](#development-team)
-- [Comparison Table](#comparison-table)
-- [Features](#features)
 - [Non-goals](#non-goals)
 - [Requirements](#requirements)
 - [Directory structure](#directory-structure)
-- [Contributing](#contributing)
 
 ## Non-goals
 
