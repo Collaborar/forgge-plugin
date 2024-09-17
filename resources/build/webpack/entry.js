@@ -5,6 +5,7 @@ const utils = require('../lib/utils');
 const keyBy = require('lodash/keyBy');
 const mapValues = require('lodash/mapValues');
 const { getWebpackEntryPoints } = require('@wordpress/scripts/utils');
+
 const getEntryPoints = getWebpackEntryPoints('script');
 
 module.exports = {

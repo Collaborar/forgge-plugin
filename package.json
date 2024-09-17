@@ -1,5 +1,7 @@
 {
-  "node": ">=20",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "wp-scripts start --config resources/build/webpack.development.js",
     "hot": "wp-scripts start --hot --config resources/build/webpack.development.js",

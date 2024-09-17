@@ -21,6 +21,7 @@ module.exports = {
 
   optimization: {
     minimizer: [
+      '...',
       /**
        * Image minimizer.
        * Optmize and compress all images using `imagemin`. You can change
@@ -63,7 +64,7 @@ module.exports = {
               ],
             ],
           },
-        }
+        },
       }),
     ],
   },
