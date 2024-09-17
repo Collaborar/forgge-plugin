@@ -1,0 +1,15 @@
+{
+  "extends": "@wordpress/stylelint-config/scss",
+  "plugins": [ "stylelint-order" ],
+  "rules": {
+    "indentation": 2,
+    "order/properties-alphabetical-order": true,
+    "order/order": [
+      "dollar-variables",
+      "custom-properties",
+      "declarations",
+      "rules",
+      "at-rules"
+    ]
+  }
+}

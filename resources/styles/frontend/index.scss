@@ -2,18 +2,18 @@
     Vendor
 \* ------------------------------------------------------------ */
 
-@import './vendor/*.scss';
+@import "./vendor/*";
 
 /* ------------------------------------------------------------ *\
     Settings
 \* ------------------------------------------------------------ */
 
-@import '~@styles/config.scss';
-@import '~@styles/shared/_variables.scss';
-@import './_variables.scss';
+@import "~@styles/config";
+@import "~@styles/shared/variables";
+@import "./variables";
 
 /* ------------------------------------------------------------ *\
     Theme
 \* ------------------------------------------------------------ */
 
-@import './_generic*.scss';
+@import "./generic*";

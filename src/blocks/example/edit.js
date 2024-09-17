@@ -10,9 +10,9 @@ import { useBlockProps } from '@wordpress/block-editor';
 import './editor.scss';
 
 export default function Edit() {
-	return (
-		<p { ...useBlockProps() }>
-			{ __( 'My App - hello from the editor!', 'my_app' ) }
-		</p>
-	);
+  return (
+    <p {...useBlockProps()}>
+      {__('My App - hello from the editor!', 'my_app')}
+    </p>
+  );
 }
