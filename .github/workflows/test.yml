@@ -12,16 +12,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-versions: [ '7.4', '7.1', '7.0' ]
+        php-versions: [ '8.2', '8.1' ]
         include:
-          - php-versions: '8.1'
-          - php-versions: '8.0'
-          - php-versions: '5.6'
-          - php-versions: '5.5'
+          - php-versions: '8.3'
             build-assets: 1
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
@@ -33,7 +30,7 @@ jobs:
 
       - name: Cache Composer packages
         id: composer-cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: vendor
           key: ${{ runner.os }}-${{ matrix.php-versions }}
@@ -54,13 +51,9 @@ jobs:
 
       - name: Install Node.js
         if: ${{ matrix.build-assets }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: 12.13
-
-      - name: Install Yarn
-        if: ${{ matrix.build-assets }}
-        run: npm install -g yarn
+          node-version: 20
 
       - name: Install Node dependencies
         if: ${{ matrix.build-assets }}
