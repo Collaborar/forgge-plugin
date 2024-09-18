@@ -44,11 +44,13 @@ class AssetsServiceProvider implements ServiceProviderInterface {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
+		$assets = require_once \MyApp::core()->assets()->getAssetDir( 'admin.asset.php' );
+
 		// Enqueue scripts.
 		\MyApp::core()->assets()->enqueueScript(
 			'theme-js-bundle',
 			\MyApp::core()->assets()->getBundleUrl( 'frontend', '.js' ),
-			[ 'jquery' ],
+			$assets[ 'dependencies' ],
 			true
 		);
 
@@ -69,11 +71,13 @@ class AssetsServiceProvider implements ServiceProviderInterface {
 	 * @return void
 	 */
 	public function enqueueAdminAssets() {
+		$assets = require_once \MyApp::core()->assets()->getAssetDir( 'admin.asset.php' );
+
 		// Enqueue scripts.
 		\MyApp::core()->assets()->enqueueScript(
 			'theme-admin-js-bundle',
 			\MyApp::core()->assets()->getBundleUrl( 'admin', '.js' ),
-			[ 'jquery' ],
+			$assets[ 'dependencies' ],
 			true
 		);
 
