@@ -15,7 +15,7 @@
     }
   ],
   "require": {
-    "php": ">=5.5",
+    "php": ">=8.2",
     "composer/installers": "^1.4",
     "collaborar/forgge": "dev-main",
     "collaborar/forgge-app-core": "dev-main"
