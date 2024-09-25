@@ -44,7 +44,7 @@ if ( file_exists( $autoload ) ) {
 	require_once $autoload;
 }
 
-my_app_declare_loaded_forgge( $name, 'theme', __FILE__ );
+my_app_declare_loaded_forgge( $name, 'plugin', __FILE__ );
 
 // Load helpers.
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'MyApp.php';
