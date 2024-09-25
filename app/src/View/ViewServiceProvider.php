@@ -2,6 +2,7 @@
 
 namespace MyApp\View;
 
+use Pimple\Container;
 use Forgge\ServiceProviders\ServiceProviderInterface;
 
 /**
@@ -12,14 +13,14 @@ class ViewServiceProvider implements ServiceProviderInterface {
 	/**
 	 * {@inheritDoc}
 	 */
-	public function register( $container ) {
+	public function register( Container $container ): void {
 		// Nothing to register.
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public function bootstrap( $container ) {
+	public function bootstrap( Container $container ): void {
 		$this->registerGlobals();
 		$this->registerComposers();
 	}

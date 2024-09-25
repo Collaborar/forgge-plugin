@@ -2,6 +2,7 @@
 
 namespace MyApp\WordPress;
 
+use Pimple\Container;
 use Forgge\ServiceProviders\ServiceProviderInterface;
 
 /**
@@ -11,14 +12,14 @@ class AdminServiceProvider implements ServiceProviderInterface {
 	/**
 	 * {@inheritDoc}
 	 */
-	public function register( $container ) {
+	public function register( Container $container ): void {
 		// Nothing to register.
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public function bootstrap( $container ) {
+	public function bootstrap( Container $container ): void {
 		add_action( 'admin_menu', [$this, 'registerAdminPages'] );
 	}
 

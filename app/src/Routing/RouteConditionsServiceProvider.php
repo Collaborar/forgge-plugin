@@ -2,6 +2,7 @@
 
 namespace MyApp\Routing;
 
+use Pimple\Container;
 use Forgge\ServiceProviders\ServiceProviderInterface;
 
 /**
@@ -12,7 +13,7 @@ class RouteConditionsServiceProvider implements ServiceProviderInterface {
 	/**
 	 * {@inheritDoc}
 	 */
-	public function register( $container ) {
+	public function register( Container $container ): void {
 		// Example route condition registration.
 		// $this->registerRouteCondition( $container, 'my_condition', MyCondition::class );
 	}
@@ -20,7 +21,7 @@ class RouteConditionsServiceProvider implements ServiceProviderInterface {
 	/**
 	 * {@inheritDoc}
 	 */
-	public function bootstrap( $container ) {
+	public function bootstrap( Container $container ): void {
 		// Nothing to bootstrap.
 	}
 

@@ -2,6 +2,7 @@
 
 namespace MyApp\WordPress;
 
+use Pimple\Container;
 use Forgge\ServiceProviders\ServiceProviderInterface;
 
 /**
@@ -11,14 +12,14 @@ class PluginServiceProvider implements ServiceProviderInterface {
 	/**
 	 * {@inheritDoc}
 	 */
-	public function register( $container ) {
+	public function register( Container $container ): void {
 		// Nothing to register.
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public function bootstrap( $container ) {
+	public function bootstrap( Container $container ): void {
 		register_activation_hook( MY_APP_PLUGIN_FILE, [$this, 'activate'] );
 		register_deactivation_hook( MY_APP_PLUGIN_FILE, [$this, 'deactivate'] );
 
