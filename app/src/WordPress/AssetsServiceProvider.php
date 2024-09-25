@@ -2,6 +2,7 @@
 
 namespace MyApp\WordPress;
 
+use Pimple\Container;
 use Forgge\ServiceProviders\ServiceProviderInterface;
 
 /**
@@ -18,14 +19,14 @@ class AssetsServiceProvider implements ServiceProviderInterface {
 	/**
 	 * {@inheritDoc}
 	 */
-	public function register( $container ) {
+	public function register( Container $container ): void {
 		// Nothing to register.
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public function bootstrap( $container ) {
+	public function bootstrap( Container $container ): void {
 		$this->filesystem = $container[ FORGGE_APPLICATION_FILESYSTEM_KEY ];
 
 		add_action( 'wp_enqueue_scripts', [$this, 'enqueueFrontendAssets'] );

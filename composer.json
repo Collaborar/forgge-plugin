@@ -17,12 +17,12 @@
   "require": {
     "php": ">=8.2",
     "composer/installers": "^1.4",
-    "collaborar/forgge": "dev-main",
-    "collaborar/forgge-app-core": "dev-main"
+    "collaborar/forgge": "@dev",
+    "collaborar/forgge-app-core": "@dev"
   },
   "require-dev": {
     "roots/wordpress": "6.6.*",
-    "collaborar/forgge-cli": "dev-main",
+    "collaborar/forgge-cli": "@dev",
     "wp-cli/i18n-command": "^2.6",
     "wp-coding-standards/wpcs": "^3.1",
     "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
@@ -63,5 +63,19 @@
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "roots/wordpress-core-installer": true
     }
-  }
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../../libs/forgge"
+    },
+    {
+      "type": "path",
+      "url": "../../libs/forgge-app-core"
+    },
+    {
+      "type": "path",
+      "url": "../../libs/forgge-cli"
+    }
+  ]
 }
