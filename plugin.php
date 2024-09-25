@@ -4,8 +4,8 @@
  * Plugin URI: https://github.com/Collaborar/forgge-plugin
  * Description:
  * Version: 0.17.0
- * Requires at least: 4.7
- * Requires PHP: 5.5.9
+ * Requires at least: 6.6
+ * Requires PHP: 8.2
  * Author: Collaborar team
  * Author URI: https://collaborar.com
  * License: GPL-2.0-only
