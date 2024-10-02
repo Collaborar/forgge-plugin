@@ -3,7 +3,7 @@
  * Plugin Name: Forgge Starter Plugin
  * Plugin URI: https://github.com/Collaborar/forgge-plugin
  * Description:
- * Version: 0.17.0
+ * Version: 0.1.0
  * Requires at least: 6.6
  * Requires PHP: 8.2
  * Author: Collaborar team

@@ -1,6 +1,6 @@
 {
   "name": "collaborar/forgge-plugin",
-  "version": "0.17.1",
+  "version": "1.0.0",
   "description": "A modern WordPress starter plugin which uses the Forgge framework",
   "type": "wordpress-plugin",
   "keywords": ["wordpress", "plugin", "starter plugin", "forgge"],
@@ -17,12 +17,12 @@
   "require": {
     "php": ">=8.2",
     "composer/installers": "^1.4",
-    "collaborar/forgge": "dev-main",
-    "collaborar/forgge-app-core": "dev-main"
+    "collaborar/forgge": "^1.0",
+    "collaborar/forgge-app-core": "^1.0"
   },
   "require-dev": {
     "roots/wordpress": "6.6.*",
-    "collaborar/forgge-cli": "dev-main",
+    "collaborar/forgge-cli": "^1.0",
     "wp-cli/i18n-command": "^2.6",
     "wp-coding-standards/wpcs": "^3.1",
     "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
