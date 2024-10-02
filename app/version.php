@@ -5,9 +5,7 @@
  * @package MyApp
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 if ( ! function_exists( 'my_app_get_loaded_forgge' ) ) {
 	/**

@@ -1,7 +1,6 @@
 /**
  * External dependencies.
  */
-const { resolve } = require('path');
 const { ProvidePlugin } = require('webpack');
 const {
   WebpackManifestPlugin: ManifestPlugin,
@@ -13,7 +12,6 @@ const {
 const utils = require('./lib/utils');
 const spriteSvg = require('./spritesvg');
 const configLoader = require('./config-loader');
-const DevelopmentModePlugin = require('./lib/development-mode-plugin');
 
 const env = utils.detectEnv();
 
@@ -29,7 +27,6 @@ const plugins = [
   new ManifestPlugin({
     writeToDisk: true,
   }),
-  new DevelopmentModePlugin({ hot: env.isHot }),
 ];
 
 module.exports = {
@@ -41,9 +38,7 @@ module.exports = {
   /**
    * The output.
    */
-  output: {
-    path: resolve(process.cwd(), 'dist')
-  },
+  output: require('./webpack/output'),
 
   /**
    * Resolve utilities.
@@ -84,7 +79,7 @@ module.exports = {
       {
         test: utils.tests.svgs,
         include: [
-          utils.srcImagesPath('sprite-svg'),
+          utils.resourcesImagesPath('sprite-svg'),
         ],
         use: [
           {

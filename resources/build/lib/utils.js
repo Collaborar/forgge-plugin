@@ -17,26 +17,29 @@ let userConfig = null;
 module.exports.rootPath = (basePath = '', destPath = '') =>
   path.resolve(path.dirname(__dirname), '../../', basePath, destPath);
 
-module.exports.srcPath = (basePath = '', destPath = '') =>
+module.exports.resourcesPath = (basePath = '', destPath = '') =>
   path.resolve(path.dirname(__dirname), '../', basePath, destPath);
+
+module.exports.srcPath = (basePath = '', destPath = '') =>
+  path.resolve(path.dirname(__dirname), '../../src', basePath, destPath);
 
 module.exports.distPath = (basePath = '', destPath = '') =>
   path.resolve(path.dirname(__dirname), '../../dist', basePath, destPath);
 
-module.exports.srcScriptsPath = destPath =>
-  exports.srcPath('scripts', destPath);
+module.exports.resourcesScriptsPath = destPath =>
+  exports.resourcesPath('scripts', destPath);
 
-module.exports.srcStylesPath = destPath =>
-  exports.srcPath('styles', destPath);
+module.exports.resourcesStylesPath = destPath =>
+  exports.resourcesPath('styles', destPath);
 
-module.exports.srcImagesPath = destPath =>
-  exports.srcPath('images', destPath);
+module.exports.resourcesImagesPath = destPath =>
+  exports.resourcesPath('images', destPath);
 
-module.exports.srcFontsPath = destPath =>
-  exports.srcPath('fonts', destPath);
+module.exports.resourcesFontsPath = destPath =>
+  exports.resourcesPath('fonts', destPath);
 
-module.exports.srcVendorPath = destPath =>
-  exports.srcPath('vendor', destPath);
+module.exports.resourcesVendorPath = destPath =>
+  exports.resourcesPath('vendor', destPath);
 
 module.exports.distScriptsPath = destPath =>
   exports.distPath('scripts', destPath);
@@ -109,7 +112,7 @@ module.exports.getUserConfig = (file, whitelisted = false) => {
 };
 
 module.exports.assetFilename = (relativeTo = null) => (file) => {
-  const resourcesDir = path.normalize(exports.srcPath()) + path.sep;
+  const resourcesDir = path.normalize(exports.resourcesPath()) + path.sep;
   const nodeModulesDir = path.normalize(path.join(exports.rootPath(), 'node_modules')) + path.sep;
   const isResourceFile = path.normalize(file).substr(0, resourcesDir.length) === resourcesDir;
   const isVendorFile = path.normalize(file).substr(0, nodeModulesDir.length) === nodeModulesDir;

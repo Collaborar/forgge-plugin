@@ -7,9 +7,7 @@
  * @package MyApp
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 // Using our ExampleController to handle a custom ajax action, for example.
 // phpcs:ignore

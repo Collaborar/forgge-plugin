@@ -7,9 +7,7 @@
  * @package MyApp
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 // Using our ExampleController to handle a custom admin page registered using add_menu_page(), for example.
 // phpcs:ignore

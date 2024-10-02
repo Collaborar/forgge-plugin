@@ -6,9 +6,7 @@
  * @package MyApp
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 // Load helpers.
 // phpcs:ignore

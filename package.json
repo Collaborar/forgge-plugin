@@ -5,7 +5,7 @@
   "scripts": {
     "start": "wp-scripts start --config resources/build/webpack.development.js",
     "hot": "wp-scripts start --hot --config resources/build/webpack.development.js",
-    "build": "wp-scripts build --config resources/build/webpack.development.js",
+    "build": "wp-scripts build --config resources/build/webpack.production.js",
     "lint": "run-s -cl lint:scripts lint:styles lint:php",
     "lint-fix": "run-s -cl lint-fix:scripts lint-fix:styles lint-fix:php",
     "lint:php": "composer lint",

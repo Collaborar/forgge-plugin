@@ -34,8 +34,8 @@ class ContentTypesServiceProvider implements ServiceProviderInterface {
 		/*
 		register_post_type(
 			'my_app_cpt',
-			array(
-				'labels'              => array(
+			[
+				'labels'              => [
 					'name'               => __( 'Custom Types', 'my_app' ),
 					'singular_name'      => __( 'Custom Type', 'my_app' ),
 					'add_new'            => __( 'Add New', 'my_app' ),
@@ -46,7 +46,7 @@ class ContentTypesServiceProvider implements ServiceProviderInterface {
 					'search_items'       => __( 'Search Custom Types', 'my_app' ),
 					'not_found'          => __( 'No custom types found', 'my_app' ),
 					'not_found_in_trash' => __( 'No custom types found in trash', 'my_app' ),
-				),
+				],
 				'show_in_rest'        => true,
 				'public'              => true,
 				'exclude_from_search' => false,
@@ -55,12 +55,12 @@ class ContentTypesServiceProvider implements ServiceProviderInterface {
 				'hierarchical'        => false,
 				'query_var'           => true,
 				'menu_icon'           => 'dashicons-admin-post',
-				'supports'            => array( 'title', 'editor', 'page-attributes' ),
-				'rewrite'             => array(
+				'supports'            => [ 'title', 'editor', 'page-attributes' ],
+				'rewrite'             => [
 					'slug'       => 'custom-post-type',
 					'with_front' => false,
-				),
-			)
+				],
+			]
 		);
 		*/
 		// phpcs:enable
@@ -76,9 +76,9 @@ class ContentTypesServiceProvider implements ServiceProviderInterface {
 		/*
 		register_taxonomy(
 			'my_app_custom_taxonomy',
-			array( 'post_type' ),
-			array(
-				'labels'            => array(
+			[ 'post_type' ],
+			[
+				'labels'            => [
 					'name'              => __( 'Custom Taxonomies', 'my_app' ),
 					'singular_name'     => __( 'Custom Taxonomy', 'my_app' ),
 					'search_items'      => __( 'Search Custom Taxonomies', 'my_app' ),
@@ -91,13 +91,13 @@ class ContentTypesServiceProvider implements ServiceProviderInterface {
 					'add_new_item'      => __( 'Add New Custom Taxonomy', 'my_app' ),
 					'new_item_name'     => __( 'New Custom Taxonomy Name', 'my_app' ),
 					'menu_name'         => __( 'Custom Taxonomies', 'my_app' ),
-				),
+				],
 				'hierarchical'      => true,
 				'show_ui'           => true,
 				'show_admin_column' => true,
 				'query_var'         => true,
-				'rewrite'           => array( 'slug' => 'custom-taxonomy' ),
-			)
+				'rewrite'           => [ 'slug' => 'custom-taxonomy' ],
+			]
 		);
 		*/
 		// phpcs:enable

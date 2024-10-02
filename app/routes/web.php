@@ -7,9 +7,7 @@
  * @package MyApp
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 // Using our ExampleController to handle the homepage, for example.
 // phpcs:ignore

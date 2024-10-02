@@ -10,6 +10,7 @@ const webpack = require('webpack');
  * Internal dependencies.
  */
 const utils = require('./lib/utils');
+const DevelopmentModePlugin = require('./lib/development-mode-plugin');
 
 /**
  * Environment.
@@ -19,6 +20,13 @@ const userConfig = utils.getUserConfig();
 const devPort = get(userConfig, 'development.port', 3000);
 const devHotUrl = url.parseURL(get(userConfig, 'development.hotUrl', 'http://localhost/').replace(/\/$/, ''));
 const hotUrl = `${devHotUrl.scheme}://${devHotUrl.host}:${devPort}/`;
+
+/**
+ * Setup webpack plugins.
+ */
+const plugins = [
+  new DevelopmentModePlugin({ hot: env.isHot }),
+];
 
 /** @type {webpack.Configuration} */
 module.exports = {
@@ -37,6 +45,11 @@ module.exports = {
   output: {
     publicPath: env.isHot ? hotUrl : ''
   },
+
+  /**
+   * Setup the transformations.
+   */
+  plugins,
 
   devServer: {
     allowedHosts: 'all',

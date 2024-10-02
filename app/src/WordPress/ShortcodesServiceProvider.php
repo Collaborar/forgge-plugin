@@ -33,9 +33,9 @@ class ShortcodesServiceProvider implements ServiceProviderInterface {
 	 */
 	public function shortcodeExample( $atts, $content ) {
 		$atts = shortcode_atts(
-			array(
+			[
 				'example_attribute' => 'example_value',
-			),
+			],
 			$atts,
 			'example'
 		);

@@ -6,7 +6,7 @@ const path = require('path');
 const loaderUtils = require('loader-utils');
 
 /**
- * The internal dependencies.
+ * Internal dependencies.
  */
 const utils = require('../lib/utils');
 

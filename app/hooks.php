@@ -7,9 +7,7 @@
  * @package MyApp
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 // phpcs:ignore
 // add_action( 'some_action', 'some_function' );
